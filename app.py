@@ -1,6 +1,6 @@
 def main():
     print("Testing pre-commit hooks")
-    x = 2
+    x = 3
     print(x)
 
 
