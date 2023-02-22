@@ -3,6 +3,11 @@ repos:
     rev: 23.1.0
     hooks:
       - id: black
+-   repo: https://github.com/pycqa/flake8
+    rev: 5.0.4
+    hooks:
+      - id: flake8
+
 -   repo: https://github.com/pre-commit/pre-commit-hooks
     rev: v3.2.0
     hooks:
@@ -11,6 +16,13 @@ repos:
     -   id: check-yaml
     -   id: pretty-format-json
     -   id: requirements-txt-fixer
+    -   id: check-added-large-files
+    -   id: check-ast
+    -   id: check-docstring-first
+    -   id: debug-statements
+    -   id: detect-private-key
+    -   id: mixed-line-ending
+
 -   repo: https://github.com/jendrikseipp/vulture
     rev: v2.7
     hooks:
