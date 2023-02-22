@@ -1,0 +1,48 @@
+
+repos:
+  # - repo: https://github.com/gruntwork-io/pre-commit
+  #   rev: v0.1.17
+  #   hooks:
+  #     - id: terraform-fmt
+  #     - id: terraform-validate
+  #     - id: tflint
+  #       args:
+  #         - "--module"
+
+  # - repo: https://github.com/antonbabenko/pre-commit-terraform
+  #   rev: v1.74.1
+  #   hooks:
+  #     - id: terraform_tfsec
+  #     - id: terraform_checkov
+
+  - repo: https://github.com/terraform-docs/terraform-docs
+    rev: v0.16.0
+    hooks:
+      - id: terraform-docs-go
+        args: [ "--output-file", "README.md", "./terraform" ]
+
+  - repo: https://github.com/pre-commit/pre-commit-hooks
+    rev: v4.1.0
+    hooks:
+      - id: trailing-whitespace
+      - id: end-of-file-fixer
+      - id: check-yaml
+      - id: check-added-large-files
+
+  - repo: https://github.com/pre-commit/pre-commit-hooks
+    rev: v3.2.0
+    hooks:
+      - id: check-added-large-files
+      - id: check-ast
+      - id: check-docstring-first
+      - id: check-yaml
+      - id: debug-statements
+      - id: detect-aws-credentials
+      - id: detect-private-key
+      - id: mixed-line-ending
+      - id: trailing-whitespace
+
+  - repo: https://github.com/kynan/nbstripout
+    rev: 0.6.0
+    hooks:
+      - id: nbstripout
